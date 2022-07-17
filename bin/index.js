@@ -7,8 +7,8 @@ program
     .command('parse')
     .version('1.0.0')
     .description('parse yaml to simple data and >> jsonfile')
-    .option('-y, --yaml [string]', 'yaml file path', '')
-    .option('-t, --target [string]', 'target yaml.json path', './yaml.json')
+    .option('-y, --yaml [string]','yaml file path').preset('')
+    .option('-t, --target [string]','target yaml.json path').preset('./yaml.json')
     .action(function (options) {
         console.log(options);
         parser(options.yaml).then(val => {
